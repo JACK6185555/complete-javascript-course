@@ -18,6 +18,7 @@ let iscountry='Hong Kong'
 let language="Chinese"
 let ispopulation=7000000
 
+console,log(iscountry)
 console.log(typeof isIsland)
 console.log(typeof iscountry)
 console.log(typeof language)
