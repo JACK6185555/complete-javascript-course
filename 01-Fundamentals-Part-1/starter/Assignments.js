@@ -14,12 +14,18 @@ console.log(population);
 alert('Data type')
 
 let isIsland=true
-let iscountry='Hong Kong'
-let language="Chinese"
-let ispopulation=7000000
+let iscountry='Hong Kong';
+let language="Chinese";
+let ispopulation=7000000;
 
-console.log(iscountry)
-console.log(typeof isIsland)
-console.log(typeof iscountry)
-console.log(typeof language)
-console.log(typeof ispopulation)
+console.log(iscountry);     
+console.log(typeof isIsland);
+console.log(typeof iscountry);
+console.log(typeof language);
+console.log(typeof ispopulation);
+
+let year;
+console.log(year);
+console.log(typeof year);
+year=1991
+console.log(typeof year);
