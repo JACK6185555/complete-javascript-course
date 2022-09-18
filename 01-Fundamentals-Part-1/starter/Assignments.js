@@ -32,3 +32,16 @@ console.log(typeof year);
 console.log(typeof null)
 
 alert('let,const and var')
+let language_1='Chinese';
+language_1='Franese';
+console.log(language_1)
+
+const language_2='Japanese';
+console.log(language_2)
+
+var language_3='English';
+if (true){
+    var language_3='Korean'
+    console.log(language_3)
+}
+console.log(language_3)
