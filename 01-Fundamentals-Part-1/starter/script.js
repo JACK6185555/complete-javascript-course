@@ -26,3 +26,14 @@ console.log(JavaScriptisFun)
 
 let typ=(typeof true)
 console.log(typ)
+
+let age=30;
+age=31;
+console.log(age);
+
+const birthyear=1991;
+console.log(birthyear)
+
+var edu=123;
+var edu=456;
+console.log(edu)
