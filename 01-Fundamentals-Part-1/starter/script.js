@@ -23,3 +23,6 @@ console.log(myFirstjob)
 
 let JavaScriptisFun=(true)
 console.log(JavaScriptisFun)
+
+let typ=(typeof true)
+console.log(typ)
