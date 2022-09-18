@@ -1,5 +1,3 @@
 let js='amazing';
-if (js==='amazing') alert('JavaScript is Fun!');
-
-40+20+8-5;
+alert('JavaScript is Fun!');
 console.log(40+20+8-5);
