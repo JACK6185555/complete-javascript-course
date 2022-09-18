@@ -1,3 +1,4 @@
+/*
 let js='amazing';
 alert('JavaScript is Fun!');
 console.log(40+20+8-5);
@@ -18,3 +19,7 @@ let job1='Progammer';
 let job2='Teacher';
 
 console.log(myFirstjob)
+*/
+
+let JavaScriptisFun=(true)
+console.log(JavaScriptisFun)
