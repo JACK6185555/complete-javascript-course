@@ -60,3 +60,14 @@ console.log(new_ispopulation)
 Finland_population=6000000;
 console.log(ispopulation>Finland_population)
 
+some_population=3300000
+console.log(population<some_population)
+
+//Challenge #1
+massMark=78;
+heightMark=1.69;
+massJohn=92;
+heightJohn=1.92;
+Mark_BMI=massMark/heightMark**2
+John_BMI=massJohn/(heightJohn*heightJohn);
+console.log(Mark_BMI,John_BMI)
