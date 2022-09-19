@@ -37,3 +37,12 @@ console.log(birthyear)
 var edu=123;
 var edu=456;
 console.log(edu)
+
+//Strings and Template Literals
+
+const firstname='John';
+const job='teacher';
+const birth_year=1991;
+const year=2037;
+
+const jonas=`I'm ${firstname}, a ${year-birth_year} years old ${job} `
