@@ -45,3 +45,17 @@ if (true){
     console.log(language_3)
 }
 console.log(language_3)
+
+
+alert('Basic operators')
+const population_half=7000000/2;
+console.log(population_half);
+
+const each_half=population_half/2;
+console.log(each_half)
+
+new_ispopulation=ispopulation++;
+console.log(new_ispopulation)
+
+Finland_population=6000000;
+console.log(ispopulation>Finland_population)
