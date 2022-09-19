@@ -70,4 +70,8 @@ massJohn=92;
 heightJohn=1.92;
 Mark_BMI=massMark/heightMark**2
 John_BMI=massJohn/(heightJohn*heightJohn);
-console.log(Mark_BMI,John_BMI)
+console.log(Mark_BMI,John_BMI);
+
+markHigherBMI=Mark_BMI>John_BMI;
+console.log(markHigherBMI);
+description='Portugal is in Europe, and its 11 million people speak portuguese'
