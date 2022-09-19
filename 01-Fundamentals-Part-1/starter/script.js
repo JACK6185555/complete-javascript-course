@@ -20,7 +20,7 @@ let job2='Teacher';
 
 console.log(myFirstjob)
 */
-
+/*
 let JavaScriptisFun=(true)
 console.log(JavaScriptisFun)
 
@@ -53,4 +53,8 @@ multiple
 lines `)
 
 console.log('String \nmultiple \nlines')
+*/
+
+
+
 
