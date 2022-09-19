@@ -46,3 +46,11 @@ const birth_year=1991;
 const year=2037;
 
 const jonas=`I'm ${firstname}, a ${year-birth_year} years old ${job} `
+console.log(jonas)
+
+console.log(`String
+multiple
+lines `)
+
+console.log('String \nmultiple \nlines')
+
