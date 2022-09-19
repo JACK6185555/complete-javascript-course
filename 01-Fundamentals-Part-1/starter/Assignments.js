@@ -123,5 +123,63 @@ console.log('19'-'13'+17);
 console.log('123'<57);
 console.log(5+6+'4'+9-4-2);
 
+console.log(Boolean(0)); //false
+console.log(Boolean(undefined)); // false
+console.log(Boolean('Jack')); //true                
+console.log(Boolean({})); //true    
+console.log(Boolean('')); //false
+
+const money=0;
+if(money){
+    console.log(`Don't spend it all `)
+}else{
+    console.log(`Get a job now !`)
+}
 
 
+const age=18;
+if (age===18);console.log('You just become an adult :D') //=== is equal value and equal type
+
+// Equality Operators: == vs. ===
+numNeighbours=Number(prompt(`How many neighbour countries does your country 
+have?`))
+
+if (numNeighbours===1){
+    console.log('Only 1 border')
+}else if (numNeighbours>1) {
+    console.log('More than 1 border')
+}else{
+    console.log('No border')
+}
+
+//logical Operators
+alert('locical Operators')
+const uzo=true;
+const kez=false;
+
+console.log(uzo&&kez) // && is and
+console.log(uzo||kez) // || is or
+console.log(!uzo) // NO
+
+let city_language='english';
+let city_people=50;
+const land=true;
+if (city_language==='english'&&city_people<50&& !land){
+    console.log(`You should live in ${country}`)
+}else{
+    console.log(`You shouldn't live in ${country}`)
+}
+
+//Challenge #3
+Dolphins_score=(96+108+89)/3;
+Koalas_score=(88+91+110)/3;
+
+if (Dolphins_score>Koalas_score&&Dolphins_score>=100){
+    console.log('Dolphins win the trophy')
+}else if(Koalas_score>Dolphins_score&&Koalas_score>=100){
+    console.log('Koalas win the trophy')
+}else if(Dolphins_score===Koalas_score&&Dolphins_score>=100&&Koalas_score>=100){
+    console.log('Both  win the trophy')
+}else{
+    console.log('No one win ')
+}
