@@ -115,3 +115,13 @@ console.log('5'+4);
 let n='1'+1;
 n-=1;
 console.log(n)
+
+//Type conversion and concerion:
+console.log('9'-'5');
+console.log('19'-'13'+'17');
+console.log('19'-'13'+17);
+console.log('123'<57);
+console.log(5+6+'4'+9-4-2);
+
+
+
