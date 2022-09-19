@@ -98,9 +98,20 @@ if(Mark_BMI>John_BMI){
 console.log(`Mark's BMI (${Mark_BMI}) is higher than John's (${John_BMI})!`);
 
 alert('Type Conversion and Coercion')
+//Type conversion
 const inputYear='1991';
-console.log(Number(inputYear),inputYear)
-console.log(Number(inputYear)+18)
+console.log(Number(inputYear),inputYear);
+console.log(Number(inputYear)+18);
 
-console.log(Number('James'))
+console.log(Number('James'));
+console.log(typeof NaN);
 
+console.log(String(23),23)
+//Type concerion 
+console.log(`I'm a `+23+` years old !`)
+console.log('5'-4);
+console.log('5'+4);
+
+let n='1'+1;
+n-=1;
+console.log(n)
