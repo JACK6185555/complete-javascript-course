@@ -67,7 +67,7 @@ alert('Challenge #1')
 massMark=78;
 heightMark=1.69;
 massJohn=92;
-heightJohn=1.92;
+heightJohn=1.95;
 Mark_BMI=massMark/heightMark**2
 John_BMI=massJohn/(heightJohn*heightJohn);
 console.log(Mark_BMI,John_BMI);
@@ -88,14 +88,19 @@ if(ispopulation>3300000){
 }else{
     console.log(`'Portugal's population is 22 million below average`)
 }
-alert('Challenge #2')
+alert('Challenge #2');
 if(Mark_BMI>John_BMI){
-    console.log(`Mark's BMI is higher than John's!`)
+    console.log(`Mark's BMI is higher than John's!`);
 }else{
-    console.log(`John's BMI is higher than Mark's!`)
+    console.log(`John's BMI is higher than Mark's!`);
 }
 
-console.log(`Mark's BMI (${Mark_BMI}) is higher than John's (${John_BMI})!`)
+console.log(`Mark's BMI (${Mark_BMI}) is higher than John's (${John_BMI})!`);
 
+alert('Type Conversion and Coercion')
+const inputYear='1991';
+console.log(Number(inputYear),inputYear)
+console.log(Number(inputYear)+18)
 
+console.log(Number('James'))
 
