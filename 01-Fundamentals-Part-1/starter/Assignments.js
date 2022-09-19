@@ -75,3 +75,4 @@ console.log(Mark_BMI,John_BMI);
 markHigherBMI=Mark_BMI>John_BMI;
 console.log(markHigherBMI);
 description='Portugal is in Europe, and its 11 million people speak portuguese'
+
