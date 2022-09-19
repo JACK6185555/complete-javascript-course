@@ -59,3 +59,4 @@ console.log(new_ispopulation)
 
 Finland_population=6000000;
 console.log(ispopulation>Finland_population)
+
