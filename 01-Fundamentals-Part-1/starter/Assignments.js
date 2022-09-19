@@ -171,15 +171,15 @@ if (city_language==='english'&&city_people<50&& !land){
 }
 
 //Challenge #3
-Dolphins_score=(96+108+89)/3;
-Koalas_score=(88+91+110)/3;
+Dolphins_score=(97+112+101)/3;
+Koalas_score=(109+95+106)/3;
 
 if (Dolphins_score>Koalas_score&&Dolphins_score>=100){
-    console.log('Dolphins win the trophy')
+    console.log('Dolphins win the trophy🏆')
 }else if(Koalas_score>Dolphins_score&&Koalas_score>=100){
-    console.log('Koalas win the trophy')
+    console.log('Koalas win the trophy🏆')
 }else if(Dolphins_score===Koalas_score&&Dolphins_score>=100&&Koalas_score>=100){
-    console.log('Both  win the trophy')
+    console.log('Both  win the trophy🙌')
 }else{
-    console.log('No one win ')
+    console.log('No one win 😥')
 }
