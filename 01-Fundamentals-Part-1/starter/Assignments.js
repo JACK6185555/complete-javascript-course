@@ -63,7 +63,7 @@ console.log(ispopulation>Finland_population)
 some_population=3300000
 console.log(population<some_population)
 
-//Challenge #1
+alert('Challenge #1')
 massMark=78;
 heightMark=1.69;
 massJohn=92;
@@ -74,5 +74,28 @@ console.log(Mark_BMI,John_BMI);
 
 markHigherBMI=Mark_BMI>John_BMI;
 console.log(markHigherBMI);
-description='Portugal is in Europe, and its 11 million people speak portuguese'
+let description='Portugal is in Europe, and its 11 million people speak portuguese'
+
+//Strings and Template Literals
+alert('Strings and Template Literals')
+ who_line_in_Europe='Protugale';
+people=1100000;
+description=(`${who_line_in_Europe} is in Europe and its ${people} people speak portuguese `)
+console.log(description)
+
+if(ispopulation>3300000){
+    console.log(`Portugal's population is above average`)
+}else{
+    console.log(`'Portugal's population is 22 million below average`)
+}
+alert('Challenge #2')
+if(Mark_BMI>John_BMI){
+    console.log(`Mark's BMI is higher than John's!`)
+}else{
+    console.log(`John's BMI is higher than Mark's!`)
+}
+
+console.log(`Mark's BMI (${Mark_BMI}) is higher than John's (${John_BMI})!`)
+
+
 
