@@ -1,3 +1,4 @@
+/*
 //Parctice 1
 alert('Values and Variables')
 
@@ -149,4 +150,32 @@ if (city_language==='english'&&city_people<50&& !land){
 }else{
     console.log(`You shouldn't live in ${country}`)
 }
+*/
+//The switch Statement
+alert('The switch Statement')
+let language='english';
+switch(language){
+    case 'chinese':
+    case 'mandarin':
+        console.log('MOST number of native speakers!')
+        break;
+    case 'spanish':
+        console.log('2nd place in number of native speakers')
+        break;
+    case 'english':
+        console.log('3rd place')
+        break;
+    case 'hindi':
+        console.log('Number 4')
+    case 'arabic':
+        console.log('5th most spoken language')
+        break;
+    default:
+        console.log('Great language too :D')
+}
+//The Conditional (Ternary) Operator
+alert('The Conditional (Ternary) Operator');
+country_population=70;
+country='Hong Kong'
 
+console.log(`${country} is ${country_population>33? 'above average':' below average'}`)
