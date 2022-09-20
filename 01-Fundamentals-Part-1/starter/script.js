@@ -54,7 +54,7 @@ lines `)
 
 console.log('String \nmultiple \nlines')
 */
-
+'use strice';
 //The Conditional (Ternary) Operator
 const age=25;
 
