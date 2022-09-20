@@ -63,6 +63,20 @@ console.log(drink)
 
 console.log(`I like to drink ${age>=18? 'wine🍷':'water💦'}`)
 //function
-function 
+function firsttry(apple,oranges){
+    console.log(apple,oranges)
+    let junce=console.log(`I have ${apple} apples and ${oranges} oranges `)
+    return junce
+}
+firsttry(5,6)
 
 
+//function exercise
+function aka(food){
+    console.log(`I like eat ${food}`)
+}
+aka('apple')
+
+const aka_1=function(food_1){
+    console.log(`I like eat `)
+}
