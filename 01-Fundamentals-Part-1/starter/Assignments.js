@@ -152,6 +152,7 @@ if (city_language==='english'&&city_people<50&& !land){
 }
 */
 //The switch Statement
+/*
 alert('The switch Statement')
 let language='english';
 switch(language){
@@ -180,31 +181,60 @@ country='Hong Kong'
 
 console.log(`${country} is ${country_population>33? 'above average':' below average'}`)
 //Function
-alert('Function')
 function describeCountry(country,population,capitalCity){
     console.log(`${country} has ${population} people and its capital city is ${capitalCity}`)
 }
 describeCountry('Finland','6 million','Helsinki')
-describeCountry('China','14 million','Banjan')
-describeCountry('Hong kong','7 million','No')
 
-// Function Declarations vs. Expressions
-alert(' Function Declarations vs. Expressions')
-function percentage0World1(populatiom){
-    console.log((populatiom/7900)*100);
+//Function Declarations vs. Expressions
+
+function percentageOfWorld1(population){
+    console.log((population/7900)*100)
 }
-percentage0World1(1441);
-percentage0World1(126.17);
-percentage0World1(80)
+percentageOfWorld1(1441)
 
-const percentage0World2=function(populatiom){
-    return (populatiom/7900)*100;
+//function expression
+const percentageOfWorld2=function(population){
+    return((population/7900)*100);
 }
-const china2=percentage0World2(1441);
-const japan2=percentage0World2(126.17)
-const korea2=percentage0World2(80)
-console.log(china2,japan2,korea2)
+const u=percentageOfWorld2(1441);
+console.log(u)
 
-const percentageOfWorld3=populatiom=>(populatiom/7900)*100;
-const taiwan=percentageOfWorld3(23.57)
-console.log(taiwan);
+//arraw function
+const percentageOfWorld3=population=>(population/7900)*100;
+const k=percentageOfWorld3(1441)
+console.log(k)
+
+// Functions Calling Other Functions
+const describePopulation=function(county,population){
+    const percentage=percentageOfWorld2(population)
+    const description = `${country} has ${population} million 
+    people, which is about ${percentage}% of the world.`;
+    console.log(description);
+
+};
+
+describePopulation('Portugal', 10);
+describePopulation('China', 1441);
+describePopulation('USA', 332);
+*/
+
+const population=[10,1441,332,83]
+if (population.length===4){
+    console.log(population[0])
+    console.log(population[1])
+    console.log(population[2])
+    console.log(population[3])
+}
+//basic array
+neighbouring=['Norway', 'Sweden', 'Russia']
+neighbouring.push('Utopia')
+console.log(neighbouring)
+neighbouring.pop()
+console.log(neighbouring)
+
+if(!neighbouring.includes("Germany")){
+    console.log('Probably not a central European country :D')
+}
+
+console.log(neighbouring.indexOf('Sweden'))
