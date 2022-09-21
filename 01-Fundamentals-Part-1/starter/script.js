@@ -78,5 +78,11 @@ function aka(food){
 aka('apple')
 
 const aka_1=function(food_1){
-    console.log(`I like eat `)
+    return(`I like eat ${food_1}`)
 }
+const haha=aka_1('apple')
+console.log(haha)
+
+const aka_2=food_3=>`I like eat ${food_3} !`
+const ex=aka_2('Apple')
+console.log(ex);
