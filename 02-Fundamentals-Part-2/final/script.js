@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 ///////////////////////////////////////
@@ -587,3 +587,24 @@ console.log(calcAverage([2, 3, 7]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
 */
+function verifyTriangleType(num1, num2, num3) {
+  var n1 = num1;
+  var n2 = num2;
+  var n3 = num3;
+
+  if (n1 === n2 && n1 === n3) {
+    console.log("Equalateral Triangle");
+  } else if (n1 === n2 || n1 === n3 || n2 === n3) {
+    console.log("Isoceles Triangle");
+  } else {
+    console.log("Scalene Triangle");
+  }
+}
+
+verifyTriangleType(5, 5, 5);
+verifyTriangleType(5, 6, 10);
+verifyTriangleType(7, 5, 58);
+verifyTriangleType(3, 7, 5);
+verifyTriangleType(5, 5, 5);
+verifyTriangleType(4, 3, 4);
+verifyTriangleType(5, 8, 8);
