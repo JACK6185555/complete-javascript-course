@@ -41,13 +41,15 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = 'You lost the game!😥';
   }
 });
+
 document.querySelector('.again').addEventListener('chick', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
-  document.querySelector('.score').textContent = score;
-  document.querySelector('.message').textContent = 'Start guessing';
-  document.querySelector('.guess').value = '';
+
+  document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('.number').textContent = '?';
-  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.guess').textContent = '';
+
+  document.querySelector('.body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
 });
