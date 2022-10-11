@@ -108,3 +108,8 @@ Implement a game rest functionality, so that the player can make a new guess! He
 
 GOOD LUCK 😀
 */
+document.querySelector('.again').addEventListener('chick', function () {
+  const score = Number(document.querySelector('.score').value);
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  console.log(score);
+});
