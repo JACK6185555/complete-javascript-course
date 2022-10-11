@@ -7,6 +7,7 @@ const printForecast = function (arr) {
   }
 };
 printForecast(date_1);
+
 for (i = 0; i < date_2.length; i++) {
   console.log(`...${date_2[i]}`);
 }
