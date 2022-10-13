@@ -10,5 +10,3 @@ const printForcast = function (a) {
 };
 k = printForcast(date1);
 q = printForcast(date2);
-console.log(k);
-console.log(q);
