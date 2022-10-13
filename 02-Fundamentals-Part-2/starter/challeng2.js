@@ -52,3 +52,14 @@ Mark.Mark_BMI() > John.John_BMI()
       `Mark's BMI (${Mark.Mark_BMI()}) is higher than John's (${John.John_BMI()})!`
     )
   : console.log("John's BMI (28.3) is higher than Mark's (23.9)!");
+
+//challenge #4
+Bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+for (let i = 0; i < Bills.length; i++) {
+  tips = calcTip(Bills[i]);
+  total = Bills[i] + tips;
+  console.log(
+    `The bill was ${Bills[i]}, the tips was ${tips}, and the total was ${total}`
+  );
+}
