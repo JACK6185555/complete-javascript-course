@@ -45,6 +45,6 @@ btnroll.addEventListener('click', function () {
 btnhold.addEventListener('click', function () {
   console.log('hello world');
   score[activeplayer] += currentscore;
-  document.getElementById(`current--${activeplayer}`).textContent =
+  document.getElementById(`score--${activeplayer}`).textContent =
     score[activeplayer];
 });
