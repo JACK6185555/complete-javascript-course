@@ -47,4 +47,15 @@ btnhold.addEventListener('click', function () {
   score[activeplayer] += currentscore;
   document.getElementById(`score--${activeplayer}`).textContent =
     score[activeplayer];
+
+  if (score[activeplayer] >= 20) {
+    document
+      .querySelector(`.player--${activeplayer}`)
+      .classList.add('player--winner');
+    document
+      .querySelector(`.player--${activeplayer}`)
+      .classList.remove('player--active');
+  } else {
+    switchPlayer();
+  }
 });
