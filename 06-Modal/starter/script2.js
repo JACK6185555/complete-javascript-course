@@ -22,4 +22,9 @@ for (i = 0; i < btnshowModal.length; i++) {
 btncloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
-Modal.addEventListener('keydown');
+document.addEventListener('keydown', function (a) {
+  console.log(a.key);
+  if (a.key === 'Tab' && !Modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
