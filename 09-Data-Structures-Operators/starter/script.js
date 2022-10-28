@@ -14,6 +14,11 @@ const restaurant = {
   order: function (startmenuIndex, mainmeniIndex) {
     return [this.starterMenu[startmenuIndex], this.mainMenu[mainmeniIndex]];
   },
+  orderMenu: function (order1, order2, order3) {
+    alert(
+      `Here is your declicious pasta with ${order1},${order2} and ${order3}! Please enjoy!`
+    );
+  },
 
   openingHours: {
     thu: {
@@ -78,3 +83,10 @@ const name_ = 'Jason';
 const letters = [...name_, ''];
 console.log(letters);
 console.log(...name_);
+
+const orderfood = [
+  promot("Let's make pasta! Ingredient1?"),
+  prompt('Ingredient2?'),
+  prompt('and ingredient3'),
+];
+console.log(orderfood);
