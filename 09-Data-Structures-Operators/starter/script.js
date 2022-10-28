@@ -77,3 +77,4 @@ console.log(...newMenu);
 const name_ = 'Jason';
 const letters = [...name_, ''];
 console.log(letters);
+console.log(...name_);
