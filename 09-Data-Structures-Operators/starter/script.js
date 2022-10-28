@@ -65,3 +65,15 @@ console.log(restaurantName, hours, tags);
 
 const { mainMenu: main = [], starterMenu: starters = [] } = restaurant;
 console.log(main, starters);
+
+const Aarr = [1, 2, 3];
+const Barr = [...Aarr, 7, 8, 9];
+console.log(Barr);
+console.log(...Barr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+console.log(...newMenu);
+const name_ = 'Jason';
+const letters = [...name_, ''];
+console.log(letters);
