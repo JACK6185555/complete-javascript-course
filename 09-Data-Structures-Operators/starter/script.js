@@ -19,6 +19,10 @@ const restaurant = {
       `Here is your declicious pasta with ${order1},${order2} and ${order3}! Please enjoy!`
     );
   },
+  orderPizza: function (mainorder, ...otherorder) {
+    console.log(mainorder);
+    console.log(otherorder);
+  },
 
   openingHours: {
     thu: {
@@ -85,8 +89,65 @@ console.log(letters);
 console.log(...name_);
 
 const orderfood = [
-  promot("Let's make pasta! Ingredient1?"),
+  prompt("Let's make pasta! Ingredient1?"),
   prompt('Ingredient2?'),
   prompt('and ingredient3'),
 ];
 console.log(orderfood);
+restaurant.orderMenu(...orderfood);
+const newResaaurant = { Foundin: 1987, Founder: 'Tomy K', ...restaurant };
+console.log(newResaaurant);
+
+const restaurantcopy = { ...restaurant };
+restaurantcopy.name = '07 VTC';
+console.log(restaurant.name);
+console.log(restaurantcopy.name);
+
+const ar = [1, 2, 3, 4, 5, 6, 7, 8];
+const [av, bv, cv, ...other] = [1, 2, 3, 4, 5, 6];
+console.log(av, bv, cv, other);
+
+const [pizza, , risotto, ...other_2] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, other_2);
+
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+const add = function (...number) {
+  let sum = 0;
+  for (let i = 0; i < number.length; i++) sum += number[i];
+  console.log(sum);
+};
+add(2, 3);
+add(2, 3, 5, 7, 8);
+add(7, 8, 9, 10, 11);
+
+const x1 = [1, 2, 5, 6, 7];
+add(...x1);
+
+restaurant.orderPizza('apple', 'dick', 'quwehu', 'qwuehkjhsda', 'hgjhdgsajd');
+restaurant.orderPizza('pizza');
+
+console.log('---OR---');
+console.log(3 || 'Jason');
+console.log('Jason' || 3);
+console.log('0' || 'Jason');
+console.log(0 || 'Jack');
+console.log(undefined || null);
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+restaurant.guests = 105;
+
+const guests = restaurant.guests ? restaurant.guests : 10;
+console.log(guests);
+
+const guests2 = restaurant.guests || 10;
+console.log(guests2);
+
+console.log('---And---');
+console.log(0 && 'Jason');
+console.log(7 && 'Jason');
+console.log('Hello' && 23 && null && 'jason');
