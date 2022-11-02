@@ -5,40 +5,77 @@ const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const hours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays[5]]: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  order: function (startmenuIndex, mainmeniIndex) {
+
+  hours,
+
+  order(startmenuIndex, mainmeniIndex) {
     return [this.starterMenu[startmenuIndex], this.mainMenu[mainmeniIndex]];
   },
-  orderMenu: function (order1, order2, order3) {
+  orderMenu(order1, order2, order3) {
     alert(
       `Here is your declicious pasta with ${order1},${order2} and ${order3}! Please enjoy!`
     );
   },
-  orderPizza: function (mainorder, ...otherorder) {
+  orderPizza(mainorder, ...otherorder) {
     console.log(mainorder);
     console.log(otherorder);
   },
-
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
 };
+//Loop object
+
+const properties = Object.keys(hours);
+console.log(properties);
+
+console.log(`We are open on ${properties.length} days!`);
+
+for (const day of Object.keys(hours)) {
+  console.log(day);
+}
+/*
+//Optional Chaining (?.)
+console.log(restaurant.hours.mon?.open);
+console.log(restaurant.hours.fri?.open);
+
+for (const day of weekdays) {
+  const open = restaurant.hours[day]?.open || 'close'; //?.檢查等同於鏈中的空值
+  console.log(`On ${day}day, we open at ${open}`);
+}
+
+const Newarr = weekdays.map(myFunction);
+
+function myFunction(item) {
+  const open =
+    restaurant.hours[item]?.open ||
+    console.log(`Sorry we have shut down on ${item}day`);
+  console.log(`On ${item}day, we open at ${open}`);
+}
+
+const newarray = [{ name: 'Jack', age: 18 }];
+console.log(newarray[0]?.name ?? 'array empty');
+*/
+////////////////////////////////////////////////////////////
+/*
 //.Destructuring Arrays
 const arr = [2, 3, 6];
 const [x, y, z] = arr;
@@ -58,18 +95,18 @@ console.log(a, b);
 
 const [i, , [j, k]] = nested;
 console.log(i, j, k);
+console.log(j, k);
 
 const [q = 1, w = 1, e = 1] = [8, 9];
 console.log(q, w, e);
-//.Destructuring Objects
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+*/
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
+/*
+//.Destructuring Objects
+const { name, categories } = restaurant;
+console.log(name, categories);
+
+const { name: restaurantName, categories: tags } = restaurant;
 console.log(restaurantName, hours, tags);
 
 const { mainMenu: main = [], starterMenu: starters = [] } = restaurant;
@@ -113,9 +150,6 @@ const [pizza, , risotto, ...other_2] = [
 ];
 console.log(pizza, risotto, other_2);
 
-const { sat, ...weekdays } = restaurant.openingHours;
-console.log(weekdays);
-
 const add = function (...number) {
   let sum = 0;
   for (let i = 0; i < number.length; i++) sum += number[i];
@@ -130,7 +164,9 @@ add(...x1);
 
 restaurant.orderPizza('apple', 'dick', 'quwehu', 'qwuehkjhsda', 'hgjhdgsajd');
 restaurant.orderPizza('pizza');
-
+*/
+////////////////////////////////////////////////////
+/*
 console.log('---OR---');
 console.log(3 || 'Jason');
 console.log('Jason' || 3);
@@ -146,8 +182,58 @@ console.log(guests);
 
 const guests2 = restaurant.guests || 10;
 console.log(guests2);
-
+*/
+////////////////////////////////////////////////////
+/*
 console.log('---And---');
 console.log(0 && 'Jason');
 console.log(7 && 'Jason');
 console.log('Hello' && 23 && null && 'jason');
+*/
+/////////////////////////////////////
+/*
+// Logical Assignment Operators
+
+const rest1 = {
+  name: 'Abc',
+  numGuests: 20,
+};
+const rest2 = {
+  name: 'edu',
+  onwer: 'Greey Lai',
+};
+//Or assigment operation
+//rest1.numGuests = rest1.numGuests || 10;
+//rest2.numGuests = rest2.numGuests || 10;
+//rest1.numGuests ||= 10;
+//rest2.numGuests ||= 10;
+
+//nulllish assigment operation(null or  undefined)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+//And assigment operation
+rest1.onwer &&= `Happy`;
+rest2.onwer &&= `Happy`;
+
+console.log(rest1);
+console.log(rest2);
+*/
+///////////////////////////////////////
+
+/*
+
+//Loop array
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu[0]);
+for (const abc of menu) {
+  console.log(abc);
+}
+
+for (const abc of menu.entries()) {
+  console.log(`${abc[0] + 1}:${abc[1]}`);
+}
+for (const [a, el] of menu.entries()) {
+  console.log(`${a + 1}:${el}`);
+}
+//console.log([...menu.entries()]);
+*/
