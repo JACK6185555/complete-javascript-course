@@ -42,6 +42,25 @@ const restaurant = {
     console.log(otherorder);
   },
 };
+//Map:Fundamentals
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze Italy');
+rest.set(2, 'Lisbon Portugal');
+rest.set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']);
+rest.set('open', 11);
+rest.set('close', 11);
+rest.set(true, 'We are open :D ');
+rest.set(false, 'We are closed :(');
+
+console.log(rest.get(2));
+console.log(rest.get('categories'));
+console.log(rest.get(true));
+
+const time = 21;
+console.log(rest.set(time > rest.get('open') && time < rest.get('close')));
+
+/*
 //set
 const orderset = new Set([
   'Pasta',
@@ -59,6 +78,7 @@ console.log(orderset.has('Peter'));
 orderset.add('Garlic Bread');
 orderset.add('Garlic Bread');
 console.log(orderset);
+*/
 /*
 //Loop object
 
