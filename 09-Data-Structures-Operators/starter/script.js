@@ -42,6 +42,24 @@ const restaurant = {
     console.log(otherorder);
   },
 };
+//set
+const orderset = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(orderset);
+console.log(new Set('Jack'));
+console.log(orderset.size);
+console.log(orderset.has('Pizza'));
+console.log(orderset.has('Peter'));
+orderset.add('Garlic Bread');
+orderset.add('Garlic Bread');
+console.log(orderset);
+/*
 //Loop object
 
 const properties = Object.keys(hours);
@@ -63,7 +81,8 @@ console.log(values_1);
 for (const [key, { open, close }] of values_1) {
   console.log(`On ${key}, we open at ${open} and close at ${close}`);
 }
-
+*/
+/************************
 /*
 //Optional Chaining (?.)
 console.log(restaurant.hours.mon?.open);
