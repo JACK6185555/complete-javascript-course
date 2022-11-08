@@ -1,30 +1,29 @@
 'use string';
 
-const btnshowModal = document.querySelectorAll('.show-modal');
-const btncloseModal = document.querySelector('.close-modal');
-const Modal = document.querySelector('.modal');
+const btn_modalShowAll = document.querySelectorAll('.show-modal');
+const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
+const btn_close = document.querySelector('.close-modal');
 
 const openModal = function () {
-  Modal.classList.remove('hidden');
+  modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 };
 
 const closeModal = function () {
-  Modal.classList.add('hidden');
+  modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
 
-for (i = 0; i < btnshowModal.length; i++) {
-  btnshowModal[i].addEventListener('click', openModal);
+for (let i = 0; i < btn_modalShowAll.length; i++) {
+  btn_modalShowAll[i].addEventListener('click', openModal);
+
+  btn_close.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
 }
 
-btncloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
-
-document.addEventListener('keydown', function (a) {
-  console.log(a.key);
-  if (a.key === 'Tab' && !Modal.classList.contains('hidden')) {
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
     closeModal();
   }
 });
