@@ -49,7 +49,7 @@ rest.set(1, 'Firenze Italy');
 rest.set(2, 'Lisbon Portugal');
 rest.set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']);
 rest.set('open', 11);
-rest.set('close', 11);
+rest.set('close', 23);
 rest.set(true, 'We are open :D ');
 rest.set(false, 'We are closed :(');
 
@@ -57,9 +57,33 @@ console.log(rest.get(2));
 console.log(rest.get('categories'));
 console.log(rest.get(true));
 
-const time = 21;
-console.log(rest.set(time > rest.get('open') && time < rest.get('close')));
+const time = 8;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
 
+console.log(rest.has('categories'));
+rest.delete(2);
+console.log(rest);
+console.log(rest.size);
+
+console.log(rest.get(1, 2));
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Javascript'],
+  ['correct', 3],
+  [true, 'Correct✨'],
+  [(false, 'Try again')],
+]);
+console.log(question.get('question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}:${value}`);
+}
+const answer = Number(prompt('Your answer:'));
+console.log(answer);
+
+console.log(question.get(question.get('correct') === answer));
 /*
 //set
 const orderset = new Set([
