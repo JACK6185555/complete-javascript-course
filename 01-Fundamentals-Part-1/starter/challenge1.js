@@ -1,41 +1,72 @@
-//challenge #1
-Mark_mass = Number(prompt("Mark'mass: "));
-Mark_height = Number(prompt("Mark's height: "));
+/*
+alert("Challenge #1");
 
-John_mass = Number(prompt("John's mass: "));
-John_height = Number(prompt("John's height: "));
+Mark_mass = Number(prompt(`Mark's mass: `));
+console.log(`Mark's mass:(${Mark_mass})`);
+Mark_height = Number(prompt(`Mark's height: `));
+console.log(`Mark's height:(${Mark_height})`);
 
 Mark_BMI = Mark_mass / Mark_height ** 2;
-John_BMI = John_mass / (Mark_height * Mark_height);
+alert(`Mark's BMI ${Mark_BMI}`);
+console.log(Mark_BMI, 3);
 
-markHigherBMI = Mark_BMI > John_BMI;
-console.log(markHigherBMI);
+John_mass = Number(prompt(`John's mass: `));
+console.log(`John's mass:(${John_mass})`);
+John_height = Number(prompt(`John's height: `));
+console.log(`John's height:(${John_height})`);
 
-//challenge #2
-if (markHigherBMI === true) {
-  console.log("Mark's BMI is higher than John's!");
-} else {
-  console.log("John's BMI is higher than Mark's!");
+John_BMI = John_mass / John_height ** 2;
+alert(`John's BMI ${John_BMI}`);
+console.log(John_BMI, 3);
+
+alert("Challenge #2");
+const markHigherBMI = (Mark_BMI, John_BMI) => {
+  Mark_BMI > John_BMI && console.log("Marks BMI more than John!");
+  John_BMI > Mark_BMI && console.log("Johns BMI more than Mark");
+};
+markHigherBMI(Mark_BMI, John_BMI);
+*/
+/*
+alert("Challenge#3");
+
+const Dolphins = (a, b, c) => {
+  return (a + b + c) / 3;
+};
+const Koalas = (a, b, c) => {
+  return (a + b + c) / 3;
+};
+
+const calculater_score = (a, b) => {
+  if ((a > b) & (a >= 100)) {
+    console.log("Dolphins team win");
+  } else if ((b > a) & (b >= 100)) {
+    console.log("Koalas team win");
+  } else {
+    console.log("No team wins");
+  }
+};
+
+const Dolphins_score = Dolphins(97, 112, 101);
+const Koalas_score = Koalas(109, 95, 123);
+console.log(`Dolphins_average_score:${Dolphins_score}`);
+console.log(`Koalas_average _score:${Koalas_score}`);
+const calculater = calculater_score(Dolphins_score, Koalas_score);
+*/
+/*
+alert("Challenge #4");
+const bills = [275, 40, 430];
+for (const bill of bills) {
+  let tip = 0;
+  if (bill >= 50 && bill <= 300) {
+    tip = bill * 0.15;
+  } else {
+    tip = bill * 0.2;
+  }
+  console.log(bill, tip);
+  let total = bill + tip;
+  console.log(total);
+  console.log(
+    `The bill was ${bill},the tip was ${tip},and the total value ${total}`
+  );
 }
-
-//challenge #3
-Dolphins_score = Number(prompt("Dolphins's score: "));
-Koalas_score = Number(prompt("Koalas's score: "));
-
-avgDolp = Dolphins_score / 3;
-avgkoal = Koalas_score / 3;
-
-if (avgDolp > avgkoal && avgDolp >= 100) {
-  console.log("Dolphins wins");
-} else if (avgkoal > avgDolp && avgkoal >= 100) {
-  console.log("Koalas wins");
-} else {
-  console.log("No team wins!");
-}
-//challenge #4
-value = Number(prompt("How much bill ? "));
-tips = value > 50 && value <= 300 ? value * 0.2 : value * 0.15;
-total = value + tips;
-console.log(
-  `The bill was ${value}, the tips was ${tips}, and the total value ${total}.`
-);
+*/
