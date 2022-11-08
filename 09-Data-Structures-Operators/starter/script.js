@@ -47,11 +47,23 @@ const restaurant = {
 const properties = Object.keys(hours);
 console.log(properties);
 
-console.log(`We are open on ${properties.length} days!`);
+let openStr = `We are open on ${properties.length} days!`;
 
 for (const day of Object.keys(hours)) {
-  console.log(day);
+  openStr += ` ${day},`;
 }
+console.log(openStr);
+
+const values = Object.values(hours); //Object.values()返回一個數組，其元素是在對像上找到的可枚舉屬性值。屬性的順序與通過手動循環對象的屬性值給出的順序相同
+console.log(values);
+
+const values_1 = Object.entries(hours);
+console.log(values_1);
+
+for (const [key, { open, close }] of values_1) {
+  console.log(`On ${key}, we open at ${open} and close at ${close}`);
+}
+
 /*
 //Optional Chaining (?.)
 console.log(restaurant.hours.mon?.open);
@@ -229,7 +241,7 @@ for (const abc of menu) {
   console.log(abc);
 }
 
-for (const abc of menu.entries()) {
+for (const abc of menu.entries()) {   <該entries()方法返回一個帶有鍵/值對的 Array Iterator 對象：
   console.log(`${abc[0] + 1}:${abc[1]}`);
 }
 for (const [a, el] of menu.entries()) {
