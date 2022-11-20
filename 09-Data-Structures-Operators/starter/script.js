@@ -76,6 +76,7 @@ const question = new Map([
   [true, 'Correct✨'],
   [(false, 'Try again')],
 ]);
+/*
 console.log(question.get('question'));
 for (const [key, value] of question) {
   if (typeof key === 'number') console.log(`Answer ${key}:${value}`);
@@ -84,6 +85,142 @@ const answer = Number(prompt('Your answer:'));
 console.log(answer);
 
 console.log(question.get(question.get('correct') === answer));
+//Working With Strings -Part1
+*/
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[2]);
+console.log(airline[2]);
+console.log('B317'[0]);
+console.log(airline.length);
+console.log(plane.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Portugal'));
+console.log(airline.indexOf('portugal'));
+console.log(airline.slice(8));
+console.log(airline.slice(4, 9));
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf('A')));
+
+const CheckSeat = seat => {
+  const s = seat.slice(-1);
+  if (s === 'A' || s === 'B') {
+    console.log('You got middle seat 😐');
+  } else {
+    console.log('You got luck seat😎');
+  }
+};
+CheckSeat('11B');
+CheckSeat('03A');
+CheckSeat('76G');
+
+console.log(new String('jason'));
+console.log(typeof new String('jason'));
+console.log(typeof new String('jason').slice(1));
+console.log(typeof new String('jason').indexOf(0));
+////Working With Strings -Part2
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+const passenger = 'jOnAS';
+const passengerLower = passenger.slice(1).toLowerCase();
+console.log(passengerLower);
+console.log(passenger[0].toUpperCase() + passengerLower);
+
+const email = 'wongkalok@gmail.com';
+const Email = '  Wongkalok@gmail.com  ';
+const Email_ = Email.toLowerCase().trim();
+console.log(Email_);
+console.log(email === Email_);
+
+console.log(email.replace('@', '*'));
+
+const announcement = `All passengers come to boarding door 23. Boarding door 23!`;
+console.log(announcement.replace(/door/g, 'gate'));
+
+console.log(announcement.includes('passengers'));
+console.log(announcement.includes('gate'));
+
+const place = 'Airbus A320neo';
+console.log(place.includes('A320'));
+console.log(place.includes('Boeling'));
+console.log(place.startsWith('Airbus'));
+
+if (place.startsWith('Airbus') && place.endsWith('neo')) {
+  console.log('Part of the NEW ARirbus family');
+}
+const checkBaggage = items => {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are NOT allowed on board');
+  } else {
+    console.log('Welcome aboard');
+  }
+};
+checkBaggage('I have a laptop, some Food and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and gun for protection');
+
+//Working With Strings -Part3
+console.log('a+very+nice+string'.split('+'));
+console.log('Jonas Schmedtmnn'.split(' '));
+
+const [firstName, lastName] = 'Jonas Schmedtmnn'.split(' ');
+console.log(firstName, lastName);
+
+const newName = ['Mr.', firstName, lastName.toLowerCase()].join(' ');
+console.log(newName);
+
+const capitalizeName = name => {
+  const names = name.split(' ');
+  const UpperName = [];
+
+  for (const n of names) {
+    //UpperName.push(n[0].toUpperCase() + n.slice(1));
+    UpperName.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(UpperName.join(' '));
+};
+capitalizeName('jessica ann smith davis');
+capitalizeName('jones schmedtmn');
+
+const message = 'Go to gate 23';
+console.log(message.padStart(25, '+'));
+console.log(message.padStart(25, '+').padEnd(29, '*'));
+
+const markCreditCard = number => {
+  const str = number + ' ';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(markCreditCard(789546521320564));
+
+const message2 = 'I Love You!';
+console.log(message2.repeat(5));
+
+const planesInLine = n => {
+  console.log(`There are ${n} planes in line ${`🛫`.repeat(n)}`);
+};
+planesInLine(4);
+planesInLine(5);
+planesInLine(2);
+
+function rangeOfNumbers(startNum, endNum) {
+  const arr = [];
+  if (startNum === endNum) {
+    return arr.push(startNum);
+  } else {
+    startNum += 1;
+    arr.push(startNum);
+    return arr;
+  }
+}
+console.log(rangeOfNumbers(1, 4));
 /*
 //set
 const orderset = new Set([
